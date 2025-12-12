@@ -1,0 +1,160 @@
+.header {
+	border-top: 4px grey double;
+	border-bottom: 4px grey double;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.logo {
+	display: inline-block;
+	width: 75%;
+	margin-left: 60px;
+	color: green;
+}
+.menu {
+	display: inline-block;
+	width: 25%;
+	margin-right: 15px;
+	font-size: 20px;
+}
+.menu a {
+	text-decoration: none;
+	color: black;
+}
+.menu_button {
+	padding: 21px 10px;
+}
+.selected {
+	border-right: 4px grey double;
+	border-left: 4px grey double;
+}
+.selected a {
+	color: green;
+	font-weight: bold;
+}
+.menu_button {
+	display: inline-block;
+}
+.container_body {
+	width: 90%;
+    margin: 15px auto;
+}
+.gallery {
+	height: 300px;
+	margin: 15px 0;
+	width: 100%;
+	white-space: nowrap;
+}
+.gallery_left {
+	display: inline-block;
+	width: 65%;
+}
+.gallery_left img {
+	display: block;
+	height: 150px;
+	width: 101%;
+	object-fit: cover;
+}
+.gallery_right {
+	display: inline-block;
+	width: 35%;
+}
+.gallery_right img {
+	display: block;
+	height: 75px;
+	width: 100%;
+	object-fit: cover;
+}
+.gallery_right .tall {
+	height: 150px;
+}
+.content {
+	height: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+.catalog {
+	float: left;
+	width: 75%;
+	border-right: 2px rgb(178 139 60) solid;
+}
+.film {
+	width: 45%;
+	min-height: 500px;
+	text-align: left;
+	border: 2px grey solid;
+	border-radius: 20px;
+	margin: 5px;
+	padding: 15px;
+	float: left;
+	box-sizing: border-box;
+}
+.film_logo {
+	text-align: center;
+}
+.film p {
+	text-align: justify;
+}
+.film .film_image {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+.film img {
+	width: 40%;
+  	height: 40%;
+  	object-fit: cover;
+  	border-radius: 30px;
+}
+.film_more {
+	font-size: 20px;
+}
+.right {
+	text-align: right;
+}
+.film_more a {
+	color: rgb(178 139 60);
+}
+.border-pink {
+	border-color: pink;
+}
+.border-brown {
+	border-color: brown;
+}
+.border-blue {
+	border-color: blue;
+}
+.border-yellow {
+	border-color: yellow;
+}
+.news {
+	display: inline-block;
+	width: 23%;
+	height: 100%;
+}
+.news_single {
+	clear: left;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+.news_content {
+	float: left;
+	text-align: right;
+	width: 50%;
+}
+.news_content a {
+	text-decoration: none;
+	color: white;
+	background: darkcyan;
+	border: 3px black solid;
+	border-radius: 5px;
+}
+.news_single img {
+	width: 45%;
+	object-fit: cover;
+}
+.footer {
+	background: grey;
+	padding: 10px;
+	color: whitelist;
+}
