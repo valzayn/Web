@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+    <title>table</title>
+
+    <body>
+        <h3 align="center">
+            <a href="index.html">На главную</a> <br>
+            <a href="table.html">Список лучших фильмов</a>
+        </h3>
+        <details>
+            <summary>График</summary>
+            <form>
+                <h3>Значение по оси X</h3>
+                <input type="radio"  name="graph" value="0"> Страна <br>
+                <input type="radio"  name="graph" value="1"> Жанр <br>
+                <input type="radio"  name="graph" value="2"> Год <br>
+                <h3>Результат</h3>
+                <input type="checkbox" name="result" value="0"> Средний рейтинг <br>
+                <input type="checkbox" name="result" value="1"> Минимальный рейтинг <br>
+                <input type="checkbox" name="result" value="1"> Максимальный рейтинг <br>
+                <input type="submit">
+            </form>
+        </details>
+        <details>
+            <summary>Фильтр</summary>
+            <form>
+                Фильм <input type="text" name="game"> <br>
+                Жанр <input type="text" name="genre"> <br>
+                Страна <input type="text" name="country"> <br>
+                Год от <input type="number" min="1990" max="2024"> до <input type="number" min="1990" max="2024"> <br>
+                рейтинг от <input type="number" min="0" max="10"> до <input type="number" min="0" max="10"> <br>
+                возраст от <input type="number" min="0" max="18"> до <input type="number" min="0" max="10">
+                <input type="submit">
+            </form>
+        </details>
+        <details>
+            <summary>Сортировка</summary>
+            <form>
+                Первый уровень: <select name="level_1">
+                    <option value="0" selected>Нет</option>
+                    <option value="1">Рейтинг</option>
+                    <option value="3">Жанр</option>
+                    <option value="4">Страна</option>
+                    <option value="5">Год</option>
+                    <option value="6">Рейтинг</option>
+                    <option value="7">Возраст</option>
+                   </select> По убыванию? <label><input type="checkbox" name="level_1_yb" value="3"></label><br>
+                   Второй уровень: <select name="level_2">
+                     <option value="0" selected>Нет</option>
+                     <option value="1">Рейтинг</option>
+                     <option value="3">Жанр</option>
+                     <option value="4">Страна</option>
+                     <option value="5">Год</option>
+                     <option value="6">Рейтинг</option>
+                     <option value="7">Возраст</option>
+                   </select> По убыванию? <label><input type="checkbox" name="level_2_yb" value="3"></label><br>
+                   Третий уровень: <select name="level_3">
+                     <option value="0" selected>Нет</option>
+                     <option value="1">Рейтинг</option>
+                     <option value="3">Жанр</option>
+                     <option value="4">Страна</option>
+                     <option value="5">Год</option>
+                     <option value="6">Рейтинг</option>
+                     <option value="7">Возраст</option>
+                   </select> По убыванию? <label><input type="checkbox" name="level_3_yb" value="3"></label><br>
+                   <input type="submit">
+            </form>
+        </details>
+
+        <table border="1" cellspacing="0" cellpadding="5">
+            <tr>
+                <th>Фильм</th>
+                <th>Жанр</th>
+                <th>Страна</th>
+                <th>Год</th>
+                <th>Рейтинг</th>
+                <th>Возраст</th>
+            </tr>
+            <tr>
+                <td>1+1</td>
+                <td>Драма</td>
+                <td>Франция</td>
+                <td>2011</td>
+                <td>8.4</td>
+                <td>18+</td>
+            </tr>
+            <tr>
+                <td>Начало</td>
+                <td>Научная фантастика</td>
+                <td>США</td>
+                <td>2010</td>
+                <td>8.8</td>
+                <td>12+</td>
+            </tr>
+            <tr>
+                <td>Форрест Гамп</td>
+                <td>Драма</td>
+                <td>США</td>
+                <td>1994</td>
+                <td>8.8</td>
+                <td>12+</td>
+            </tr>
+            <tr>
+                <td>Паразиты</td>
+                <td>Триллер</td>
+                <td>Южная Корея</td>
+                <td>2019</td>
+                <td>8.6</td>
+                <td>16+</td>
+            </tr>
+            <tr>
+                <td>Матрица</td>
+                <td>Научная фантастика</td>
+                <td>США</td>
+                <td>1999</td>
+                <td>8.7</td>
+                <td>16+</td>
+            </tr>
+            <tr>
+                <td>Сияние</td>
+                <td>Ужасы</td>
+                <td>США</td>
+                <td>1980</td>
+                <td>8.4</td>
+                <td>18+</td>
+            </tr>
+            <tr>
+                <td>Темный рыцарь</td>
+                <td>Экшн</td>
+                <td>США</td>
+                <td>2008</td>
+                <td>9.0</td>
+                <td>12+</td>
+            </tr>
+            <tr>
+                <td>Крестный отец</td>
+                <td>Криминал</td>
+                <td>США</td>
+                <td>1972</td>
+                <td>9.2</td>
+                <td>16+</td>
+            </tr>
+            <tr>
+                <td>Титаник</td>
+                <td>Мелодрама</td>
+                <td>США</td>
+                <td>1997</td>
+                <td>7.8</td>
+                <td>12+</td>
+            </tr>
+            <tr>
+                <td>Семь самураев</td>
+                <td>Драма</td>
+                <td>Япония</td>
+                <td>1954</td>
+                <td>8.6</td>
+                <td>16+</td>
+            </tr>
+            <tr>
+                <td>Гладиатор</td>
+                <td>Экшн</td>
+                <td>США</td>
+                <td>2000</td>
+                <td>8.5</td>
+                <td>16+</td>
+            </tr>
+            <tr>
+                <td>Зеленая миля</td>
+                <td>Драма</td>
+                <td>США</td>
+                <td>1999</td>
+                <td>8.6</td>
+                <td>16+</td>
+            </tr>
+            <tr>
+                <td>Интерстеллар</td>
+                <td>Научная фантастика</td>
+                <td>США</td>
+                <td>2014</td>
+                <td>8.6</td>
+                <td>12+</td>
+            </tr>
+            <tr>
+                <td>Волк с Уолл-стрит</td>
+                <td>Комедия/Драма</td>
+                <td>США</td>
+                <td>2013</td>
+                <td>8.2</td>
+                <td>18+</td>
+            </tr>
+            <tr>
+                <td>Достучаться до небес</td>
+                <td>Драма/Комедия</td>
+                <td>Германия</td>
+                <td>1997</td>
+                <td>8.2</td>
+                <td>16+</td>
+            </tr>
+            <tr>
+                <td>Однажды в Америке</td>
+                <td>Криминал/Драма</ td >
+                 <td>США</td>
+                 <td>1984</td>
+                 <td>8.4</td>
+                 <td>18+</td>
+             </tr>
+            <tr>
+                <td>Убить Билла: Часть 1</td>
+                <td>Экшн/Приключения</td>
+                <td>США</td>
+                <td>2003</td>
+                <td>8.1</td>
+                <td>18+</td>
+             </tr>
+            <tr>
+                <td>Бойцовский клуб</td>
+                <td>Драма</td>
+                <td>США</td>
+                <td>1999</td>
+                <td>8.8</td>
+                <td>18+</td>
+             </tr>
+            <tr>
+                <td>Побег из Шоушенка</td>
+                <td>Драма/Криминал</td>
+                <td>США</td>
+                <td>1994</td>
+                <td>9.3</td>
+                <td>16+</td>
+             </tr>
+            <tr>
+                <td>В поисках счастья</td>
+                <td>Драма/Биография</td>
+                <td>США</td>
+                <td>2006</td>
+                <td>8.0</td>
+                <td>12+</td>
+             </tr>
+            <tr>
+                <td>Престиж</td>
+                <td>Драма/Триллер</td>
+                <td>США</td>
+                <td>2006</td>
+                <td>8.5</td>
+                <td>12+</td>
+             </tr>
+            <tr>
+                <td>Гарри Поттер и философский камень</td>
+                <td>Фэнтези/Приключения</td>
+                <td>Великобритания/США</td>
+                <td>2001</td>
+                <td>7.6</td>
+                <td>6+</td>
+             </tr>
+            <tr>
+                <td>Книга Илая</td>
+                <td>Научная фантастика/Экшн</td>
+                <td>США</td>
+                <td>2010</td>
+                <td>6.9</td>
+                <td>16+</td>
+             </tr>
+            <tr>
+                <td>Мстители: Финал</td>
+                <td>Экшн/Фантастика</td>
+                <td>США</td>
+                <td>2019</td>
+                <td>8.4</td>
+                <td>12+</td>
+             </tr>
+            <tr>
+                <td>Звёздные войны: Эпизод IV - Новая надежда </td>
+                <td>Научная фантастика/Приключения</td>
+                <td>США</td>
+                <td>1977</td>
+                <td>8.6</td>
+                <td>12+</td>
+             </tr>
+            <tr>
+                <td>Шестое чувство</td>
+                <td>Триллер/Драма</td>
+                <td>США</td>
+                <td>1999</td>
+                <td>8.1</td>
+                <td>12+</td>
+             </tr>
+            <tr>
+                <td>Чужой</td>
+                <td>Научная фантастика/Ужасы</td>
+                <td>Великобритания/США</td>
+                <td>1979</td>
+                <td>8.4</td>
+                <td>16+</td>
+             </tr>
+             <tr>
+                <td>Старикам тут не место</td>
+                <td>Триллер/Драма</td>
+                <td>США</td>
+                <td>2007</td>
+                <td>8.1</td>
+                <td>16+</td>
+            </tr>
+            <tr>
+                <td>Сквозь снег</td>
+                <td>Научная фантастика/Экшн</td>
+                <td>Южная Корея</td>
+                <td>2013</td>
+                <td>7.1</td>
+                <td>16+</td>
+            </tr>
+            <tr>
+                <td>Мементо</td>
+                <td>Триллер/Драма</td>
+                <td>США</td>
+                <td>2000</td>
+                <td>8.4</td>
+                <td>16+</td>
+            </tr>
+            <tr>
+                <td>Остров проклятых</td>
+                <td>Триллер/Драма</td>
+                <td>США</td>
+                <td>2010</td>
+                <td>8.2</td>
+                <td>16+</td>
+            </tr>
+            <tr>
+                <td>Мост через реку Квай</td>
+                <td>Военный/Драма</td>
+                <td>Великобритания/США</td>
+                <td>1957</td>
+                <td>8.2</td>
+                <td>12+</td>
+            </tr>
+            <tr>
+                <td>Зодиак</td>
+                <td>Триллер/Драма</td>
+                <td>США</td>
+                <td>2007</td>
+                <td>7.7</td>
+                <td>16+</td>
+            </tr>
+            <tr>
+                <td>Психо</td>
+                <td>Ужасы/Триллер</td>
+                <td>США</td>
+                <td>1960</td>
+                <td>8.5</td>
+                <td>18+</td>
+            </tr>
+            <tr>
+                <td>Джентльмены удачи</td>
+                <td>Комедия/Криминал</td>
+                <td>СССР</td>
+                <td>1971</td>
+                <td>8.5</td>
+                <td>12+</td>
+            </tr>
+            <tr>
+                <td>Бегущий по лезвию 2049</td>
+                <td>Научная фантастика/Драма</td>
+                <td>США</td>
+                <td>2017</td>
+                <td>8.0</td>
+                <td>16+</td>
+            </tr>
+            <tr>
+                <td>Человек-паук: Через вселенные</td>
+                <td>Анимация/Приключения</td>
+                <td>США</td>
+                <td>2018</td>
+                <td>8.4</td>
+                <td>6+</td>
+            </tr>
+            <tr>
+                <td>Ла-Ла Ленд</td>
+                <td>Мюзикл/Драма</td>
+                <td>США</td>
+                <td>2016</td>
+                <td>8.0</td>
+                <td>12+</td>
+            </tr>
+            <tr>
+                <td>Побег из планеты Земля</td>
+                <td>Анимация/Комедия</td>
+                <td>США</td>
+               <td>2013</td>
+               <td>5.9</td>
+               <td>6+</td>
+             </tr>
+            <tr>
+               <td>Гарри Поттер и Тайная комната</td>
+               <td>Фэнтези/Приключения</td>
+               <td>Великобритания/США</td>
+               <td>2002</td>
+               <td>7.4</td>
+               <td>6+</td>
+             </tr>
+            <tr>
+               <td>Зеленая книга</td>
+               <td>Драма/Комедия</td>
+               <td>США</td>
+               <td>2018</td>
+               <td>8.2</td>
+               <td>12+</td>
+             </tr>
+            <tr>
+               <td>Невидимая сторона</td>
+               <td>Драма/Спорт</td>
+               <td>США</td>
+               <td>2009</td>
+               <td>7.6</td>
+               <td>12+</td>
+             </tr>
+            <tr>
+               <td>В поисках Немо</td>
+               <td>Анимация/Приключения</td>
+               <td>США</td>
+               <td>2003</td>
+               <td>8.1</td>
+               <td>6+</td>
+             </tr>
+            <tr>
+               <td>Мир Юрского периода</td>
+               <td>Научная фантастика/Экшн</td>
+               <td>США</td>
+               <td>2015</td>
+               <td>7.0</td>
+               <td>12+</td>
+             </tr>
+            <tr>
+               <td>Брат 2</td>
+               <td>Криминал/Драма</td>
+               <td>Россия</td>
+               <td>2000</td>
+               <td>8.1</td>
+               <td>18+</td>
+             </tr>
+            <tr>
+               <td>Крепкий орешек</td>
+               <td>Экшн/Триллер</td>
+               <td>США</td>
+               <td>1988</td>
+               <td>8.2</td>
+               <td>18+</td>
+             </tr>
+             <tr>
+                 <td>Остров</td>
+                 <td>Триллер/Драма</td>
+                 <td>США</td>
+                 <td>2010</td>
+                 <td>8.2</td>
+                 <td>16+</td>
+             </tr>
+             <tr>
+                 <td>Чужой: Завет</td>
+                 <td>Научная фантастика/Ужасы</td>
+                 <td>Великобритания/США</td>
+                 <td>2015</td>
+                 <td>8.4</td>
+                 <td>16+</td>
+              </tr>
+              <tr>
+                  <td>Мстители: Эра Альтрона</td>
+                  <td>Экшн/Фантастика</td>
+                  <td>США</td>
+                  <td>2017</td>
+                  <td>8.0</td>
+                  <td>16+</td>
+               </tr>
+    </table>
+    </body>
+</html>
