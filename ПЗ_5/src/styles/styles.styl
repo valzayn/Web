@@ -1,0 +1,206 @@
+bc(color)
+	border-color color
+
+full = 100%
+
+.header 
+	display flex
+	border-top 4px grey double
+	border-bottom 4px grey double
+
+.logo 
+	width 75%
+	margin-left 60px
+	color green
+
+.menu
+	display flex
+	align-items center
+	width 25%
+	margin-right 15px
+	font-size 20px
+	&__button
+		padding 0 10px
+		&__url
+			white-space nowrap
+			text-decoration none
+			color black
+			&:hover
+				color red
+		&_selected
+			border-right 4px grey double
+			border-left 4px grey double
+			& > .menu__button__url 
+				color green
+				font-weight bold
+
+.container_body
+	margin 15px auto
+	width 90%
+
+.content
+	display grid
+	grid-column-gap 10px
+	grid-template-columns 2.5fr 1fr
+	grid-template-rows min-content
+	& img
+		transition 0.5s
+		&:hover
+			transform scale(1.05)
+
+.catalog 
+	display grid
+	height min-content
+	grid-gap 10px
+	grid-template-columns 1fr 1fr
+	grid-template-rows minmax(min-content, 10px)
+	padding-right 30px
+
+.news 
+	border-left 2px rgb(178 139 60) solid
+	padding-left 30px
+
+.film 
+	padding 10px
+	border 2px grey solid
+	border-radius 20px
+	max-height 550px
+	& p 
+		text-align justify
+	&_logo 
+		text-align center
+	&_image 
+		text-align center
+		margin 0 auto
+	& img
+		border-radius 30px
+		object-fit cover
+		width 40%
+	&_more 
+		font-size 20px
+	&_more a 
+		color rgb(178 139 60)
+		&:hover
+			color red
+
+.border-
+	&pink
+		bc(pink)
+	&brown 
+		bc(brown)
+	&blue 
+		bc(blue)
+	&yellow 
+		bc(yellow)
+
+.gallery 
+	margin 15px 0
+	width full
+	display flex
+	&_left 
+		width 65%
+		& img 
+			height 150px
+			width full
+			object-fit cover
+	&_right 
+		width 35%
+		& img 
+			height 75px
+			width full
+			object-fit cover
+
+		& .tall
+			height 150px
+
+.news
+	&_single 
+		display flex
+		height min-content
+		width full
+		flex-flow nowrap
+		justify-content center
+		text-align right
+		margin-bottom 10px
+		& img 
+			width full
+			object-fit cover
+	&_content 
+		padding-right 10px
+		width 50%
+		& a 
+			text-decoration none
+			color white
+			background darkcyan
+			border 3px black solid
+			border-radius 5px
+			&:hover
+				background red
+	&_image 
+		width 50%
+
+.table
+	width full
+	margin-bottom 20px
+	border 1px solid #dddddd
+	border-collapse collapse
+	& th
+		font-weight bold
+		padding 5px
+		background #efefef
+		border 1px solid #dddddd
+	& td
+		border 1px solid #dddddd
+		padding 5px
+	
+.film_page
+	margin 0 auto
+	width 75%
+	& img
+		display block
+		margin 0 auto
+
+.news_page
+	display grid
+	grid-template-columns 1fr 1fr 1fr 1fr
+	text-align center
+	&_img img
+		width 75%
+
+.footer 
+	background grey
+	padding 10px
+	color white
+
+@media (max-width 720px) 
+	.menu 
+		display grid
+		grid-template-columns 1fr 1fr
+	
+	.gallery 
+		flex-direction column
+	
+	.catalog 
+		grid-template-columns 1fr
+	
+	.content 
+		grid-template-columns 1fr
+	
+	.news
+		width full
+		border-width 0px
+		padding 0
+		&_content 
+			width full
+		&_image 
+			width full
+			& img 
+				width 60%
+		&_content 
+			margin-bottom 5px
+		&_single 
+			flex-flow column
+			text-align center
+			width full
+	.news_page
+		grid-template-columns 1fr

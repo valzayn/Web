@@ -1,0 +1,17 @@
+include mixins
+- var data = require('./data.json')
+
+doctype html
+html(lang="ru")
+    head
+        link(rel="stylesheet", href="../styles/styles.css")
+        title= "Films!"
+    body
+        .header
+            .logo
+                h3 Фильмы
+            block menu
+        .container_body
+            block body
+        .footer
+            p Зайнулин В.С 4 подгруппа
