@@ -1,0 +1,9 @@
+extends ../components/template
+block menu
+    +createMenu(3)
+block body
+    +createGallery(['inter', 'one', 'jen', 'razr', 'sinester'])
+    +createGraph(["Страна", "Жанр", "Год"], ["Средний рейтинг", "Минимальный рейтинг", "Максимальный рейтинг"])
+    +createFilt(data['filt'])
+    +createSort(data['sortLevels'], data['sort'])
+    +createTable(data["tableHead"], data["table"])

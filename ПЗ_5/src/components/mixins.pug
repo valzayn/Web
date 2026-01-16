@@ -1,0 +1,147 @@
+mixin createFilmLeft(logo, file, color, descr)
+    div(class='film border-' + color)
+        .film_image
+            img(src= require(`../images/${file}.jpg`))
+        .film_logo
+            h2= logo
+        p= descr
+        .film_more
+            a(href="#") Подробнее>>
+mixin createSingle(logo, file, color, descr)
+    div(class='film border-' + color)
+        .film_image
+            img(src= require(`../images/${file}.jpg`))
+        .film_logo
+            h2= logo
+        p= descr
+        .film_more
+            a(href="single.html") Подробнее>>
+mixin createFilmSingle(logo, file, color, descr)
+    div(class='film border-' + color)
+        .single_image
+            img(src= require(`../images/${file}.jpg`))
+        .single_logo
+            h2= logo
+        p= descr
+mixin createFilmRight(logo, file, color, descr)
+    div(class='film border-' + color)
+        .film_logo
+            h2= logo
+        p= descr
+        .film_image
+            img(src= require(`../images/${file}.jpg`))
+        .film_more
+            a(href="#") Подробнее>>
+
+mixin createNews(logo, file, descr)
+    .news_single
+        .news_content
+            .news_logo
+                h2= logo
+            p= descr
+            a(href="#") Подробнее>>
+        .news_image
+            img(src= require(`../images/${file}.jpg`))
+
+mixin createMenu(selected)
+    .menu
+        - var k = 1
+        each url, name in data["menu"][0]
+            .menu__button
+                if k != selected
+                    a(class="menu__button__url" href= url)= name
+                else
+                    div(class="menu__button menu__button_selected")
+                        a(class="menu__button__url" href= url)= name
+            - k++
+
+mixin createGallery(fileList)
+    .gallery
+        .gallery_left
+            -for (var i = 0; i < 2; i++)
+                img(src= require(`../images/${fileList[i]}.jpg`))
+        .gallery_right
+            -for (var i = 2; i < 5; i++)
+                if i == 3   
+                    img(class='tall', src= require(`../images/${fileList[i]}.jpg`))
+                else
+                    img(src= require(`../images/${fileList[i]}.jpg`))
+
+mixin createCatalog
+    .catalog
+        - for (var i = 0; i < 4; i++)
+            if i == 0
+                +createSingle(data["films"][i]["title"], data["films"][i]["file"], data["films"][i]["color"], data["films"][i]["descr"])
+                - continue
+            if i % 2 == 0
+                +createFilmLeft(data["films"][i]["title"], data["films"][i]["file"], data["films"][i]["color"], data["films"][i]["descr"])
+            else
+                +createFilmRight(data["films"][i]["title"], data["films"][i]["file"], data["films"][i]["color"], data["films"][i]["descr"])
+mixin createNewsBlock
+    .news
+        - for (var i = 0; i < 4; i++)
+            +createNews(data["news"][i]["title"], data["news"][i]["file"], data["news"][i]["descr"])
+
+mixin createTable(tableHead, table)
+        table(border="1", cellpadding="10", cellspacing="0").table
+            thead
+                tr
+                    each key in tableHead
+                        th= key
+            tbody
+                each film in table
+                    tr
+                    each value, key in film
+                        td= value
+mixin createNewsPage
+    .news_page
+        - for (var i = 0; i < 4; i++)
+            .news_page_film
+                h2= data["films"][i]["title"]
+                a(href="#")
+                    .news_page_img
+                        img(src= require(`../images/${data["films"][i]["file"]}.jpg`))
+
+mixin createGraph(valueX, result)
+    details
+        summary График
+        form
+            h3 Значение по оси X
+            each value, index in valueX
+                input(type="radio" name="graph" value= index)
+                span= value
+            h3 Результат
+            each value, index in result
+                input(type="checkbox" name="result" value= index)
+                span= value
+            input(type="submit")
+
+mixin createFilt(filt)
+    details
+        summary Фильтр
+        form
+            - for (var i = 0; i < 3; i++)
+                each value, key in filt[i]
+                    span= key
+                    input(type="text" name= value)
+                    br
+            - for (var i = 3; i < 5; i++)
+                each value, key in filt[i]
+                    span= key
+                    input(type="number" min= value[0] max= value[1])
+                    br
+            input(type="submit")
+
+mixin createSort(sortLevels, sortCat)
+    details
+        summary Сортировка
+        form
+            each valueL, indexL in sortLevels
+                span= valueL
+                select(name=`level_${indexL}`)
+                    each value, index in sortCat
+                        option(value= index)= value
+                span  По убыванию?
+                label 
+                    input(type="checkbox" name=`level_${indexL + 1}_yb` value="3")
+                br
