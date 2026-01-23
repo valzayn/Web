@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="task">
+			<img src="abc.jpg">
+			<div class="input">
+				<form>
+					<p>
+						Входные данные: <br>
+						<label><input type="radio" checked name="var" value="1"> боковая сторона и угол при основании</label></br>
+						<label><input type="radio" name="var" value="2"> основание и противолежащий угол</label>
+					</p>
+					<div id="var1">
+						<p>
+						<label>боковая сторона =
+							<input type="number" id="input1">
+						</label>
+						</p>
+						<p>
+							<label>угол при основании =
+								<input type="number" id="input2">
+							</label>
+						</p>
+					</div>
+					<div id="var2">
+					<p>
+						<label>основание =
+							<input type="number" id="input3">
+						</label>
+					</p>
+					<p>
+						<label>противолежащий угол =
+							<input type="number" id="input4">
+						</label>
+					</p>
+					</div>
+					<p>
+						Найти: <br>
+						<label><input type="checkbox" id="task1" > периметр</label></br>
+						<label><input type="checkbox" id="task2"> медианы</label></br>
+						<label><input type="checkbox" id="task3"> неизвестные стороны</label>
+					</p>
+					<p>
+						<input id="submit" type="button" value="Вычислить"
+						onClick="calculate(this.form)">
+						<input type="button" value="Очистить"
+						onClick="this.form.reset(); document.getElementById('output').innerHTML = ''; document.forms[0].submit.disabled = false;">
+					</p>
+				</form>
+			</div>
+			<div id="output">
+			</div>
+		</div>
+	</body>
+	<script src="program.js"> </script>
+</html>
