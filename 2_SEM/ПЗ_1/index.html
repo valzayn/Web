@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Films!</title>
+		<link rel="stylesheet" href="CSS/style.css">
+		<script src="JavaScript/table.js"></script>
+		<script src="JavaScript/data.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<h3>Фильмы</h3>
+			</div>
+			<div class="menu">
+				<div class="menu__button"><a class="menu__button__url" href="/">Главная</a>
+				</div>
+				<div class="menu__button"><a class="menu__button__url" href="/news.html">Новинки</a>
+				</div>
+				<div class="menu__button">
+					<div class="menu__button menu__button_selected"><a class="menu__button__url" href="/best.html">Лучшие фильмы</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="container_body">
+			<div class="gallery">
+				<div class="gallery_left"><img src="images/inter.jpg"/><img src="images/one.jpg"/>
+				</div>
+				<div class="gallery_right"><img src="images/jen.jpg"/><img class="tall" src="images/razr.jpg"/><img src="images/sinester.jpg"/>
+				</div>
+			</div>
+			<div class="main">
+				<div class="forms">
+					<details>
+						<summary>График</summary>
+						<form>
+							<h3>Значение по оси X</h3>
+							<input type="radio"  name="graph" value="0"> Страна <br>
+							<input type="radio"  name="graph" value="1"> Жанр <br>
+							<input type="radio"  name="graph" value="2"> Год <br>
+							<h3>Результат</h3>
+							<input type="checkbox" name="result" value="0"> Средний рейтинг <br>
+							<input type="checkbox" name="result" value="1"> Минимальный рейтинг <br>
+							<input type="checkbox" name="result" value="1"> Максимальный рейтинг <br>
+							<input type="submit">
+						</form>
+					</details>
+					<details>
+						<summary>Фильтры</summary>
+						<form id="filter">
+							<p>
+								<label for="title">Название:</label>
+								<input type="text" id="title">
+							</p>
+							<p>
+								<label for="genre">Тип:</label>
+								<input type="text" id="genre">
+							</p>
+							<p>
+								<label for="country">Страна:</label>
+								<input type="text" id="country">
+							</p>
+							<p>
+								<label for="yearFrom">Год: </label>
+								от <input type="number" id="yearFrom"> 
+								до <input type="number" id="yearTo">
+							</p>
+							<p>
+								<label for="ratFrom">Рейтинг: </label>
+								от <input type="number" id="ratFrom"> 
+								до <input type="number" id="ratTo">
+							</p>
+							<p>
+								<label for="ageFrom">Возраст:</label>
+								от <input type="number" id="ageFrom"> 
+								до <input type="number" id="ageTo">
+							</p>
+							<input id="search" type="button" value="Найти">
+							<input id="clear" type="button" value="Очистить фильтры"> 
+						</form>
+					</details>
+					<details>
+						<summary>Сортировки</summary>
+						<form id="sort">
+							<p> Сортировать по</p>
+							<p>
+								<select id="fieldsFirst">
+								</select> 
+								по убыванию? <input  type="checkbox"  id="fieldsFirstDesc">
+							</p>
+							<p> 
+								<select id="fieldsSecond">
+								</select> 
+								по убыванию? <input  type="checkbox"  id="fieldsSecondDesc">
+							</p>
+							<p> 
+								<select id="fieldsThird">
+								</select> 
+								по убыванию? <input  type="checkbox"  id="fieldsThirdDesc">
+							</p>
+							<input id="sort_button" type="button" value="Сортировать"> 
+							<input id="clear_sort"type="button" value="Сбросить сортировку">
+						</form>
+					</details>
+				</div>
+				<table id="list">
+				</table>
+			</div>
+		</div>
+		<div class="footer">
+			<p>Зайнулин В.С 4 подгруппа</p>
+		</div>
+	</body>
+	<script src="JavaScript/filter.js"></script>
+	<script src="JavaScript/main.js"></script>
+	<script src="JavaScript/sort.js"></script>
+</html>
